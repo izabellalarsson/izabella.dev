@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install bun
         uses: oven-sh/setup-bun@v1
@@ -23,7 +23,7 @@ jobs:
           bun run build
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           local-dir: dist/
           server: ${{ secrets.ftp_server }}
