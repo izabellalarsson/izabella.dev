@@ -1,8 +1,10 @@
 ---
-import Social from "./Social.astro";
-const platform = "github";
-const username = "withastro";
+const today = new Date();
 ---
+
+<footer>
+    &copy; {today.getFullYear()} Izabella. All rights reserved.
+</footer>
 
 <style>
     footer {
@@ -11,9 +13,3 @@ const username = "withastro";
       margin-top: 2rem;
     }
   </style>
-
-<footer>
-    <Social platform="twitter" username="astrodotbuild" />
-    <Social platform="github" username="withastro" />
-    <Social platform="youtube" username="astrodotbuild" />
-</footer>
