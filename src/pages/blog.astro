@@ -5,11 +5,13 @@ import "../styles/global.css";
 
 const allPosts = await Astro.glob("../pages/blog/*.md");
 const pageTitle = "Blog";
+
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <p>This is where I will post about my journey learning Astro.</p>
   <ul>
-    {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+    {allPosts.sort((a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate))
+      .map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
   </ul>
 </BaseLayout>
