@@ -48,6 +48,8 @@ h1 {
 /* nav styles */
 nav {
     position: relative;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .nav-links {
@@ -62,19 +64,22 @@ nav {
   display: inline-block;
   text-align: center;
   padding: 0px 10px;
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 1rem;
 }
 
 a {
-    color: rgb(109, 111, 131);
+  color: rgb(109, 111, 131);
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  text-decoration: underline;
+  text-decoration: none;
+  background-color: rgb(118, 134, 245);
+  color: rgb(28, 32, 57);
+  border-radius: 5px;
 }
 
-.nav-links a:first-child {
+/* .nav-links a:first-child {
  padding: 0px;
-}
+} */
