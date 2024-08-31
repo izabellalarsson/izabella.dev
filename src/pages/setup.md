@@ -2,11 +2,6 @@
 layout: ../layouts/MarkdownPageLayout.astro
 title: "Dev Setup"
 ---
-## CLI
-- [Kitty](https://sw.kovidgoyal.net/kitty/)
-- [Starship](https://starship.rs/)
-- [Oh my zsh](https://ohmyz.sh/)
-
 ## Applications 
 
 - [Raycast](https://www.raycast.com/)
@@ -18,3 +13,12 @@ title: "Dev Setup"
 - Switches
 - Keyboard 
 - Keycaps
+
+## CLI
+- [Kitty](https://sw.kovidgoyal.net/kitty/)
+- [Starship](https://starship.rs/)
+- [Oh my zsh](https://ohmyz.sh/)
+
+---
+
+- [Dotfiles](https://github.com/izabellalarsson/dotfiles)
