@@ -1,0 +1,43 @@
+---
+import { publishDate } from "../helpers/dateFormat";
+
+const { title, url, description, pubDate, tags } = Astro.props;
+---
+
+<li>
+    <a href={url}>
+        <h2>{title}</h2>
+    </a>
+    <div>
+    <p>{publishDate(pubDate)}</p>
+    {tags && tags.map((tag: string) => {
+        if (tag === "learning in public") {
+            return 
+        }
+     return <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+    })}
+    </div>
+    <p>{description}</p>
+</li>
+
+
+<style>
+    li {
+        margin-bottom: 4rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(118, 134, 245);
+    }
+
+    a:hover {
+        text-decoration: underline;
+    } 
+
+    div {
+        display: flex;
+        gap: 1rem;
+    }
+  </style>
+  
