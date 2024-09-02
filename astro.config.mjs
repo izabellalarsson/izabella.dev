@@ -5,5 +5,8 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   site: "https://izabella.dev",
-  integrations: [preact()]
+  integrations: [preact()],
+  redirects: {
+    '/blog': '/writing'
+  }
 });
